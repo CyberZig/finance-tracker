@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   finance-tracker:
-    image: finance-tracker:v1
+    image: ghcr.io/CyberZig/finance-tracker:latest
     build: 
       context: .
       dockerfile: Dockerfile
