@@ -12,8 +12,8 @@ services:
     environment:
       - NODE_ENV=production
     networks:
-      - finance-net
+      - local-network
 
 networks:
-  finance-net:
-    driver: bridge
+  local-network:
+    external: true
