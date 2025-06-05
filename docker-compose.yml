@@ -1,7 +1,19 @@
 version: '3.8'
+
 services:
   finance-tracker:
-    build: .
+    image: finance-tracker:v1
+    build: 
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "3000:80"
     restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - finance-net
+
+networks:
+  finance-net:
+    driver: bridge
